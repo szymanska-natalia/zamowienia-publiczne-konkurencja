@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2">
+  <Nodes>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="390" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>ISO_COUNTRY_CODE = "PL"</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ISO_COUNTRY_CODE = "PL"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="510" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="834" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File />
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+            <TableStyle>Quoted</TableStyle>
+            <TransactionMessages>False</TransactionMessages>
+            <Table>public.raw_notices</Table>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <OutputOption>Overwrite</OutputOption>
+            <Connection DcmType="ConnectionId" DcmTitle="pg_procurement_ds — pg_local" DcmSchemaId="database-odbc-dsn-postgresql">dd6df2bd-5bfb-4ce3-87fd-00b315f70c37</Connection>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:pg_procurement_ds — pg_local
+Table=public.raw_notices</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="654" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="ID_NOTICE_CAN" />
+            <Field name="TED_NOTICE_URL" />
+            <Field name="YEAR" />
+            <Field name="ID_TYPE" />
+            <Field name="DT_DISPATCH" />
+            <Field name="XSD_VERSION" />
+            <Field name="CANCELLED" />
+            <Field name="CORRECTIONS" />
+            <Field name="B_MULTIPLE_CAE" />
+            <Field name="CAE_NAME" />
+            <Field name="CAE_NATIONALID" />
+            <Field name="CAE_ADDRESS" />
+            <Field name="CAE_TOWN" />
+            <Field name="CAE_POSTAL_CODE" />
+            <Field name="CAE_GPA_ANNEX" />
+            <Field name="ISO_COUNTRY_CODE" />
+            <Field name="ISO_COUNTRY_CODE_GPA" />
+            <Field name="B_MULTIPLE_COUNTRY" />
+            <Field name="ISO_COUNTRY_CODE_ALL" />
+            <Field name="CAE_TYPE" />
+            <Field name="EU_INST_CODE" />
+            <Field name="MAIN_ACTIVITY" />
+            <Field name="B_ON_BEHALF" />
+            <Field name="B_INVOLVES_JOINT_PROCUREMENT" />
+            <Field name="B_AWARDED_BY_CENTRAL_BODY" />
+            <Field name="TYPE_OF_CONTRACT" />
+            <Field name="TAL_LOCATION_NUTS" />
+            <Field name="B_FRA_AGREEMENT" />
+            <Field name="FRA_ESTIMATED" />
+            <Field name="B_FRA_CONTRACT" />
+            <Field name="B_DYN_PURCH_SYST" />
+            <Field name="CPV" />
+            <Field name="MAIN_CPV_CODE_GPA" />
+            <Field name="ID_LOT" />
+            <Field name="ADDITIONAL_CPVS" />
+            <Field name="B_GPA" />
+            <Field name="GPA_COVERAGE" />
+            <Field name="LOTS_NUMBER" />
+            <Field name="VALUE_EURO" />
+            <Field name="VALUE_EURO_FIN_1" />
+            <Field name="VALUE_EURO_FIN_2" />
+            <Field name="B_EU_FUNDS" />
+            <Field name="TOP_TYPE" />
+            <Field name="B_ACCELERATED" />
+            <Field name="OUT_OF_DIRECTIVES" />
+            <Field name="CRIT_CODE" />
+            <Field name="CRIT_PRICE_WEIGHT" />
+            <Field name="CRIT_CRITERIA" />
+            <Field name="CRIT_WEIGHTS" />
+            <Field name="B_ELECTRONIC_AUCTION" />
+            <Field name="NUMBER_AWARDS" />
+            <Field name="ID_AWARD" />
+            <Field name="ID_LOT_AWARDED" />
+            <Field name="INFO_ON_NON_AWARD" />
+            <Field name="INFO_UNPUBLISHED" />
+            <Field name="B_AWARDED_TO_A_GROUP" />
+            <Field name="WIN_NAME" />
+            <Field name="WIN_NATIONALID" />
+            <Field name="WIN_ADDRESS" />
+            <Field name="WIN_TOWN" />
+            <Field name="WIN_POSTAL_CODE" />
+            <Field name="WIN_COUNTRY_CODE" />
+            <Field name="B_CONTRACTOR_SME" />
+            <Field name="CONTRACT_NUMBER" />
+            <Field name="TITLE" />
+            <Field name="NUMBER_OFFERS" />
+            <Field name="NUMBER_TENDERS_SME" />
+            <Field name="NUMBER_TENDERS_OTHER_EU" />
+            <Field name="NUMBER_TENDERS_NON_EU" />
+            <Field name="NUMBER_OFFERS_ELECTR" />
+            <Field name="AWARD_EST_VALUE_EURO" />
+            <Field name="AWARD_VALUE_EURO" />
+            <Field name="AWARD_VALUE_EURO_FIN_1" />
+            <Field name="B_SUBCONTRACTED" />
+            <Field name="DT_AWARD" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression>Lowercase([_CurrentField_])</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="id_notice_can" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ted_notice_url" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="year" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="id_type" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="dt_dispatch" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="xsd_version" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cancelled" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="corrections" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_multiple_cae" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_name" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_nationalid" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_address" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_town" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_postal_code" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_gpa_annex" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="iso_country_code" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="iso_country_code_gpa" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_multiple_country" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="iso_country_code_all" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cae_type" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="eu_inst_code" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="main_activity" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_on_behalf" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_involves_joint_procurement" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_awarded_by_central_body" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="type_of_contract" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="tal_location_nuts" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_fra_agreement" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="fra_estimated" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_fra_contract" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_dyn_purch_syst" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="cpv" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="main_cpv_code_gpa" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="id_lot" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="additional_cpvs" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_gpa" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="gpa_coverage" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="lots_number" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="value_euro" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="value_euro_fin_1" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="value_euro_fin_2" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_eu_funds" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="top_type" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_accelerated" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="out_of_directives" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="crit_code" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="crit_price_weight" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="crit_criteria" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="crit_weights" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_electronic_auction" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="number_awards" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="id_award" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="id_lot_awarded" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="info_on_non_award" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="info_unpublished" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_awarded_to_a_group" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="win_name" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="win_nationalid" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="win_address" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="win_town" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="win_postal_code" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="win_country_code" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_contractor_sme" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="contract_number" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="title" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="number_offers" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="number_tenders_sme" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="number_tenders_other_eu" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="number_tenders_non_eu" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="number_offers_electr" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="award_est_value_euro" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="award_value_euro" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="award_value_euro_fin_1" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="b_subcontracted" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="dt_award" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="186" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>65001</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>export_CAN_*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID_NOTICE_CAN" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="TED_NOTICE_URL" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="YEAR" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ID_TYPE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="DT_DISPATCH" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="XSD_VERSION" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CANCELLED" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CORRECTIONS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_MULTIPLE_CAE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_NAME" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_NATIONALID" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_ADDRESS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_TOWN" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_POSTAL_CODE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_GPA_ANNEX" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ISO_COUNTRY_CODE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ISO_COUNTRY_CODE_GPA" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_MULTIPLE_COUNTRY" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ISO_COUNTRY_CODE_ALL" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CAE_TYPE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="EU_INST_CODE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="MAIN_ACTIVITY" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_ON_BEHALF" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_INVOLVES_JOINT_PROCUREMENT" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_AWARDED_BY_CENTRAL_BODY" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="TYPE_OF_CONTRACT" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="TAL_LOCATION_NUTS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_FRA_AGREEMENT" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="FRA_ESTIMATED" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_FRA_CONTRACT" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_DYN_PURCH_SYST" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CPV" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="MAIN_CPV_CODE_GPA" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ID_LOT" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ADDITIONAL_CPVS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_GPA" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="GPA_COVERAGE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="LOTS_NUMBER" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="VALUE_EURO" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="VALUE_EURO_FIN_1" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="VALUE_EURO_FIN_2" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_EU_FUNDS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="TOP_TYPE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_ACCELERATED" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="OUT_OF_DIRECTIVES" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CRIT_CODE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CRIT_PRICE_WEIGHT" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CRIT_CRITERIA" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CRIT_WEIGHTS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_ELECTRONIC_AUCTION" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="NUMBER_AWARDS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ID_AWARD" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="ID_LOT_AWARDED" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="INFO_ON_NON_AWARD" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="INFO_UNPUBLISHED" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_AWARDED_TO_A_GROUP" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="WIN_NAME" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="WIN_NATIONALID" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="WIN_ADDRESS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="WIN_TOWN" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="WIN_POSTAL_CODE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="WIN_COUNTRY_CODE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_CONTRACTOR_SME" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="CONTRACT_NUMBER" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="TITLE" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="NUMBER_OFFERS" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="NUMBER_TENDERS_SME" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="NUMBER_TENDERS_OTHER_EU" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="NUMBER_TENDERS_NON_EU" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="NUMBER_OFFERS_ELECTR" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="AWARD_EST_VALUE_EURO" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="AWARD_VALUE_EURO" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="AWARD_VALUE_EURO_FIN_1" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="B_SUBCONTRACTED" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+            <Field name="DT_AWARD" size="254" source="File: C:\Users\Ma8ax87\Desktop\projekt przetargi\export_CAN_*.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="11" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4740ff8d-aca5-4ede-bf3b-723a615264ee" />
+      <Telemetry>
+        <PreviousWorkflowId value="a7dc24fb-3f74-411b-ad3e-11813c77b2a9" />
+        <OriginWorkflowId value="a7dc24fb-3f74-411b-ad3e-11813c77b2a9" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
