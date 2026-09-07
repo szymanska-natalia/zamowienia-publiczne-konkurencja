@@ -196,18 +196,7 @@ Pobrać z TED pliki contract award notices za lata 2021, 2022, 2023 i rozpakowa�
 Utworzyć bazę procurement w PostgreSQL, skonfigurować DSN ODBC (psqlODBC 16, wariant Unicode).
 Uruchomić alteryx/01_load_ted_to_postgres.yxmd — tworzy raw_notices.
 Uruchomić skrypty SQL w kolejności numeracji.
-Otworzyć powerbi/raport.pbix i odświeżyć dane.
-przetargi-konkurencja-analiza/
-├── README.md
-├── raport.png
-├── alteryx/
-│   └── 01_load_ted_to_postgres.yxmd
-├── sql/
-│   ├── 01_clean_awards.sql
-│   ├── 02_awards_final.sql
-│   ├── 03_analiza_konkurencja.sql
-│   └── 04_analiza_jakosc_danych.sql
-└── powerbi/
-    └── raport.pbix
+
+
 
 Pliki CSV nie są dołączone do repozytorium ze względu na rozmiar — są publicznie dostępne pod linkiem w sekcji Dane.
