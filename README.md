@@ -255,15 +255,3 @@ przetargi-konkurencja-analiza/
 ```
 
 Pliki CSV nie są dołączone do repozytorium ze względu na rozmiar — są publicznie dostępne pod linkiem w sekcji *Dane*.
-
-## Status
-
-- [x] Środowisko: PostgreSQL, ODBC, połączenie dwukierunkowe z Alteryx
-- [x] Warstwa surowa: `raw_notices`, 580 804 wiersze, 3 lata
-- [x] Rozpoznanie danych i ocena jakości
-- [x] Warstwa czysta: `clean_awards`
-- [x] Tabela analityczna `awards_final` — reguła odcięcia wartości błędnych
-- [x] Analiza główna: mediana wskaźnika według liczby ofert
-- [x] Walidacja zewnętrzna wobec danych Komisji Europejskiej
-- [x] Raport Power BI
-- [ ] Publikacja repozytorium
